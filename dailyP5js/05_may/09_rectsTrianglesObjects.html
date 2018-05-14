@@ -1,0 +1,88 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	
+// make shapes
+var square1, square2, square3, square4, square5, square6;
+var triangle1, triangle2, triangle3, triangle4, triangle5, triangle6;
+
+// colors
+var lightRed = '#92180F',
+    darkRed = '#460B00',
+    pink = '#C4516D',
+	lightGreen = '#75732F',
+	brown = '#603002',
+	orange = '#BB623A';
+
+var sideLength = 100;
+
+function setup() {
+  	createCanvas(400, 400);
+  	square1 = new newSquare(10					, 100				, sideLength, lightRed);
+  	square2 = new newSquare(10 + sideLength		, 100				, sideLength, brown);
+  	square3 = new newSquare(10 + sideLength * 2	, 100				, sideLength, lightRed);
+  	square4 = new newSquare(10					, 100 + sideLength	, sideLength, lightRed);
+  	square5 = new newSquare(10 + sideLength		, 100 + sideLength	, sideLength, brown);
+  	square6 = new newSquare(10 + sideLength * 2	, 100 + sideLength	, sideLength, darkRed);
+
+  	// triangle(x1,y1,x2,y2,x3,y3)
+  	triangle1 = new newTriangle(10					,200, 110, 200, 110, 150, pink); 
+  	triangle2 = new newTriangle(10 + sideLength		,200, 210, 200, 210, 150, lightGreen); 
+  	triangle3 = new newTriangle(10 + sideLength * 2	,200, 310, 200, 310, 150, orange);
+  	triangle4 = new newTriangle(10					,300, 110, 300, 110, 250, darkRed);
+  	triangle5 = new newTriangle(10 + sideLength		,300, 210, 300, 210, 250, darkRed);
+  	triangle6 = new newTriangle(10 + sideLength * 2	,300, 310, 300, 310, 250, lightGreen);
+}
+
+function draw() {
+  	background(220);
+  	square1.display();
+  	square2.display();
+  	square3.display();
+  	square4.display();
+  	square5.display();
+  	square6.display();
+
+  	triangle1.display(); 
+  	triangle2.display(); 
+  	triangle3.display();
+  	triangle4.display();
+  	triangle5.display();
+  	triangle6.display();
+}
+
+function newSquare(xx, yy, size, phil) {
+  	this.x = xx;
+  	this.y = yy;
+  	this.side = size;
+  	this.fill = phil;
+  
+  	this.display = function() {
+    	//noStroke();
+    	fill(this.fill);
+    	rect(this.x, this.y, this.side, this.side);
+  	}
+}
+
+function newTriangle(xx1,yy1,xx2,yy2,xx3,yy3, phil) {
+	// triangle(x1,y1,x2,y2,x3,y3)
+	this.x1 = xx1;
+  	this.y1 = yy1;
+  	this.x2 = xx2;
+  	this.y2 = yy2;
+  	this.x3 = xx3;
+  	this.y3 = yy3;
+	this.fill = phil;
+
+	this.display = function() {
+		fill(this.fill);
+		triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
+	}
+}
+
+</script>
+</body>
+</html>
