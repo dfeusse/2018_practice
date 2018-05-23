@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var greenRects;
+
+	function setup() {
+		greenRects = new rotatedRect;
+
+		for(var i = 0; )
+	}
+
+	function draw() {
+		createCanvas(600, 600);
+	}
+
+	function rotatedRect(x, y, sideLength, rotateAngle, color) {
+		this.x = x;
+		this.y = y;
+		this.rotateAngle = 0;
+		this.fill = color;
+		this.sizeOfSide = sideLength;
+
+		this.display = function() {
+			rect(this.x, this.y, this.sizeOfSide, this.sizeOfSide);
+		}
+	}
+
+</script>
+</body>
+</html>
