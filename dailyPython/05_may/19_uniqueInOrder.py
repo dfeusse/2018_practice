@@ -10,13 +10,14 @@ unique_in_order([1,2,2,3,3])       == [1,2,3]
 def unique_in_order(iterable):
 	array = [i for i in iterable]
 	print array
+	lenArray = len(array)
 	noDups = []
 	currentIndex = 0
 	for i in array:
+		print i
+		if i != array[currentIndex+1]:
+			print 'hey'
 		currentIndex += 1
-		if len(array) != currentIndex
-			if array[currentIndex+1] != i:
-				noDups.append(i)
 	return noDups
 
 print unique_in_order('AAAABBBCCDAABBB') #== ['A', 'B', 'C', 'D', 'A', 'B']
