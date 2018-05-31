@@ -21,3 +21,13 @@ print high_and_low("1 -1 0")#,# "1 -1");
 print high_and_low("1 1 0")#,# "1 0");
 print high_and_low("-1 -1 0")#,# "0 -1");
 print high_and_low("42")#,# "42 42");
+
+
+'''
+def high_and_low(numbers): #z.
+    nn = [int(s) for s in numbers.split(" ")]
+    return "%i %i" % (max(nn),min(nn))
+
+def high_and_low(numbers):
+  n = map(int, numbers.split(' '))
+  return str(max(n)) + ' ' + str(min(n))

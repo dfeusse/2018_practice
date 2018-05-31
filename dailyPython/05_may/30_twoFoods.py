@@ -1,5 +1,6 @@
 '''
-Given an array containing a list of good foods, return a string containing the assertion that any two of the individually good foods are really good when combined.
+Given an array containing a list of good foods, return a string containing the assertion that 
+any two of the individually good foods are really good when combined.
 
 eg: "You know what's actually really good? Pancakes and relish."
 
@@ -17,5 +18,11 @@ But there should be 2 different foods listed unless there was only one food give
 Capitalization should be correct, the first given food should be capitalized, but the second should not.
 The input array should not be modified by the method.
 '''
+
 def actually_really_good(foods):
     #your code here
+	return "You know what's actually really good?" + "hi"
+
+print actually_really_good(["Ice cream", "Ham", "Relish", "Pancakes", "Ketchup", "Cheese", "Eggs", "Cupcakes", "Sour cream", "Hot chocolate", "Avocado", "Skittles"])
+print actually_really_good( ['Peanut butter'] )
+print actually_really_good( [] ) #  "You know what's actually really good? Nothing!"
