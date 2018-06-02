@@ -26,3 +26,16 @@ print maskify(               "1") #==                "1"
 print maskify(                "") #==                 ""
 print maskify("Skippy")                                   #== "##ippy"
 print maskify("Nananananananananananananananana Batman!")# == "####################################man!"
+
+'''
+def maskify(cc):
+    return "#"*(len(cc)-4) + cc[-4:]
+
+def maskify(cc):
+    l = len(cc)
+    if l <= 4: return cc
+    return (l - 4) * '#' + cc[-4:]
+
+def maskify(cc):
+    return '{message:#>{fill}}'.format(message=cc[-4:], fill=len(cc))
+    '''
