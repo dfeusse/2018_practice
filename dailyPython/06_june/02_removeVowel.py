@@ -16,3 +16,17 @@ def disemvowel(string):
 	return stringNoVowels
 
 print disemvowel("This website is for losers LOL!")#,"Ths wbst s fr lsrs LL!")
+
+'''
+def disemvowel(s):
+    return s.translate(None, "aeiouAEIOU")
+
+def disemvowel(string):
+    return "".join(c for c in string if c.lower() not in "aeiou")
+
+def disemvowel(s):
+    for i in "aeiouAEIOU":
+        s = s.replace(i,'')
+    return s
+
+    '''
