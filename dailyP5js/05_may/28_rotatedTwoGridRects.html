@@ -15,8 +15,10 @@
 	*/
 
 	function setup() {
-		greenRects01 = new rotatedRect(100, 0, 100, PI / 3, 255);
-		greenRects02 = new rotatedRect(100, 0, 100, PI / 5 , 0);
+		for (var i = 0; i < 5; i++) {
+			twoRects(i + (i * 50), i + (i * 50));
+		}
+		
 		/*
 		for(var i = 0; i < 5; i++) {
 			'greenRects' + i) = new rotatedRect(100, 100, 100, 0, 255);
@@ -51,6 +53,11 @@
 			rect(0, 0, this.sizeOfSide, this.sizeOfSide);
 			pop();
 		}
+	}
+
+	function twoRects(xx, yy) {
+		greenRects01 = new rotatedRect(100 + xx, 0 + yy, 100, PI / 3, 255);
+		greenRects02 = new rotatedRect(100 + xx, 0 + yy, 100, PI / 5 , 0);
 	}
 
 </script>
