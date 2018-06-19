@@ -1,0 +1,75 @@
+<html>
+<head>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script> -->
+<script src="../../../libs/p5/p5.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var rects = [];
+
+	
+
+	function setup() {
+		//greenRects01 = new rotatedRect(100, 0)//, 100)//, PI / 3, 255);
+		//greenRects02 = new rotatedRect(100, 0)//, 100), PI / 5 , 0);
+		for (var i = 0; i<4; i++) {
+			//for (var j = 0; j < 4; j++) {
+	    	rects.push(new rotatedRect(100 + (i*140), 100 + (i*140)));
+	    	//}
+	  	}
+	  	console.log(rects);
+	}
+
+	function draw() {
+		createCanvas(600, 600);
+
+		//greenRects01.display();
+		//greenRects02.display();
+		//for (var i = 0; i < rects.length; i++) {
+		for (var i = 0; i < 4; i++) {
+			//for (var j = 0; j < 4; j++) {
+			rects[i].display();
+			//rects[j].display();
+			//}
+		}
+	}
+
+	//function rotatedRect(x, y, sideLength, rotateAngle, color) {
+	function rotatedRect(x, y) {//, sideLength) {//, rotateAngle, color) {
+		this.x = x;
+		this.y = y;
+		//this.rotateAngle = rotateAngle;
+		//this.fill = color;
+		//this.sizeOfSide = sideLength;
+
+		this.display = function() {
+			noStroke();
+			// green, left tilting twoRects
+			push();
+			translate(this.x, this.y);
+			//rotate(this.rotateAngle);
+			rotate(PI/3);
+			//fill(this.fill);
+			//fill('#009E7D');
+			fill(0, 162, 128, 100);
+			//rect(0, 0, this.sizeOfSide, this.sizeOfSide);
+			rect(0, 0, 100, 100);
+			pop();
+
+			// second tan rect
+			push();
+			translate(this.x, this.y);
+			rotate(PI/5);
+			//fill(this.fill);
+			//fill('#B8C89F');
+			fill(182, 198, 157, 100);
+			rect(0, 0, 100, 100);
+			pop();
+		}
+	}
+
+
+</script>
+</body>
+</html>
