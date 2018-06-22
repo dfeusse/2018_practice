@@ -10,3 +10,9 @@ Your task is to make 'Past' function which returns time converted to miliseconds
 
 past(0, 1, 1) == 61000
 '''
+def past(h, m, s):
+	# need total seconds
+	secs = (h * 60 * 60) + (m * 60) + s
+	return secs * 1000
+	# total seconds * 1000
+print past(0,1,1)
