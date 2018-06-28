@@ -12,18 +12,16 @@ def unique_in_order(string):
 	uniqueList = []
 	# make all a list
 	listString = list(string)
-	#print listString
+	print listString
 	# get index of each element
 	listIndex = 0
-
-	# get each element in string
-	# check if next element is same
-	# if not, add to array
 	for i in listString:
-		if len(listString) <= listIndex:
-			print i
-			if i != listString[listIndex+1]:
-				uniqueList.append(i)
+		if listIndex +1 < len(listString):
+			#print '--------'
+			#print listString[listIndex]
+			#print listString[listIndex+1]
+			if listString[listIndex] != listString[listIndex+1]:
+				uniqueList.append(listString[listIndex])
 		listIndex += 1
 	return uniqueList
 	
