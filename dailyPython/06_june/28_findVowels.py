@@ -32,3 +32,14 @@ print vowel_indices('YoMama')# -> [1,2,4,6]
 def vowel_indices(word):
   return [i+1 for i,c in enumerate(word.lower()) if c in 'aeiouy']
   '''
+  ''' The enumerate() function adds a counter to an iterable.
+  
+  my_list = ['apple', 'banana', 'grapes', 'pear']
+for c, value in enumerate(my_list, 1):
+    print(c, value)
+
+# Output:
+# 1 apple
+# 2 banana
+# 3 grapes
+# 4 pear
