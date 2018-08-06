@@ -39,3 +39,17 @@ print sum_dig_pow(10, 100)#,  [89])
 print sum_dig_pow(90, 100)#, [])
 print sum_dig_pow(89, 135)#, [89, 135])
 '''
+
+def sum_dig_pow(a, b):
+    return [x for x in range(a, b+1) if sum(int(d)**i for i, d in enumerate(str(x), 1)) == x]
+
+def sum_dig_pow(a, b): # range(a, b + 1) will be studied by the function
+    res = []
+    for number in range(a, b+1):
+        digits = [int(i) for i in str(number)]
+        s = 0
+        for idx, val in enumerate(digits):
+            s += val ** (idx + 1)
+        if s == number:
+            res.append(number)
+    return res
